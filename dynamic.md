@@ -22,6 +22,6 @@ While play testing, the following parameters should be tracked:
 
 We could define ![D_i](https://latex.codecogs.com/svg.image?D_i&space;) as the difficulty of level *i* as follows:
 
-![Difficulty equation](https://latex.codecogs.com/svg.image?\frac{H_i}{T_i}*P_i)
+![Difficulty equation](https://latex.codecogs.com/svg.image?\frac{H_i}{T_i*R_i}+P_i)
 
 
