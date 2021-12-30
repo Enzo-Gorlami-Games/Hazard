@@ -1,47 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Stateful))]
-public class HazardObjectController : MonoBehaviour
+public class MoveableObjectController : MonoBehaviour
 {
+    private const string COLLIDE_TAG = "Player";
+
     [SerializeField] private MessageController actionMsg;
     public float reachRange = 1.8f;
 
-    private Stateful statefulObject;
-    private Camera fpsCam;
-    private GameObject player;
-
-
     private bool playerEntered;
-    private string actionMsgTxt = "Press E to ";
+    private string actionMsgTxt = "Press F to ";
+    private Stateful statefulObject;
 
-    private int rayLayerMask;
 
-    // Use this for initialization
-    void Start()
+
+    private void OnTriggerEnter(Collider other)
     {
-        // initialize relevant game objects
-        player = GameObject.FindGameObjectWithTag("Player");
-        fpsCam = Camera.main;
-
-        if(fpsCam == null)
-        {
-            Debug.LogError("A camera tagged 'MainCamera is missiing");
-        }
-
-        statefulObject = GetComponent<Stateful>();
-        statefulObject.displayState();
-
-        LayerMask iRayLM = LayerMask.NameToLayer("InteractRaycast");
-        rayLayerMask = 1 << iRayLM.value;
-
-        actionMsg.hide();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject == player)     //player has collided with trigger
+        if(other.tag == COLLIDE_TAG)
         {
             playerEntered = true;
         }
@@ -49,7 +25,7 @@ public class HazardObjectController : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)     //player has exited trigger
+        if (other.tag == COLLIDE_TAG)
         {
             playerEntered = false;
             actionMsg.hide();
@@ -63,11 +39,17 @@ public class HazardObjectController : MonoBehaviour
         return rtnMsg;
     }
 
+
+    void Start()
+    {
+        statefulObject = GetComponent<Stateful>();
+    }
     // Update is called once per frame
     void Update()
     {
         if (playerEntered)
         {
+            Debug.Log("Player Entered");
             actionMsgTxt = getGuiMsg(statefulObject.getState());
             actionMsg.setMsg(actionMsgTxt);
             actionMsg.show();

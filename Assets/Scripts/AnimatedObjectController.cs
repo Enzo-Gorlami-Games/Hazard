@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveObjectController : MonoBehaviour 
+public class AnimatedObjectController : MonoBehaviour 
 {
 	public float reachRange = 1.8f;			
 
@@ -76,7 +76,7 @@ public class MoveObjectController : MonoBehaviour
 			//if raycast hits a collider on the rayLayerMask
 			if (Physics.Raycast(rayOrigin,fpsCam.transform.forward, out hit,reachRange,rayLayerMask))
 			{
-				MoveableObject moveableObject = null;
+				AnimatedObject moveableObject = null;
 				//is the object of the collider player is looking at the same as me?
 				if (!isEqualToParent(hit.collider, out moveableObject))
 				{	//it's not so return;
@@ -109,14 +109,14 @@ public class MoveObjectController : MonoBehaviour
 	}
 
 	//is current gameObject equal to the gameObject of other.  check its parents
-	private bool isEqualToParent(Collider other, out MoveableObject draw)
+	private bool isEqualToParent(Collider other, out AnimatedObject draw)
 	{
 		draw = null;
 		bool rtnVal = false;
 		try
 		{
 			int maxWalk = 6;
-			draw = other.GetComponent<MoveableObject>();
+			draw = other.GetComponent<AnimatedObject>();
 
 			GameObject currentGO = other.gameObject;
 			for(int i=0;i<maxWalk;i++)
@@ -124,7 +124,7 @@ public class MoveObjectController : MonoBehaviour
 				if (currentGO.Equals(this.gameObject))
 				{
 					rtnVal = true;	
-					if (draw== null) draw = currentGO.GetComponentInParent<MoveableObject>();
+					if (draw== null) draw = currentGO.GetComponentInParent<AnimatedObject>();
 					break;			//exit loop early.
 				}
 

@@ -1,24 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class PressurePlate : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    private bool collision;
+    private int counter;
 
     private void OnTriggerEnter(Collider other)
     {
-        collision = true;
+        counter++;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        collision = false;
+        counter--;
     }
 
     void Update()
     {
-        if (collision)
+        if (counter > 0)
         {
             animator.SetBool("isOpen_Obj_1", true);
         }
