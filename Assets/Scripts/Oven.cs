@@ -12,16 +12,17 @@ public class Oven : Stateful
     {
         foreach (Transform child in transform)
         {
-            if (child.name.StartsWith("Stove"))
+            if (child.name.StartsWith("Particle"))
             {
-                Material childMaterial = child.gameObject.GetComponent<Renderer>().material;
+                ParticleSystem childPartical = child.gameObject.GetComponent<ParticleSystem>();
+                var em = childPartical.emission;
                 if (isHazardous)
-                {
-                    childMaterial.color = Color.red;
+                {   
+                    em.enabled = true;
                 }
                 else
                 {
-                    childMaterial.color = Color.black;
+                    em.enabled = false;
                 }
 
             }

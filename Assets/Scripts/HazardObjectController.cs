@@ -68,23 +68,15 @@ public class HazardObjectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerEntered)
+        if (playerEntered)
         {
-            //var ray = fpsCam.ScreenPointToRay(Input.mousePosition);
-            //center point of viewport in World space.
-            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
-            RaycastHit hit;
-
-            if(Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, reachRange, rayLayerMask))
+            actionMsgTxt = getGuiMsg(statefulObject.getState());
+            actionMsg.setMsg(actionMsgTxt);
+            actionMsg.show();
+            if (Input.GetKeyUp(KeyCode.F))
             {
-                actionMsgTxt = getGuiMsg(statefulObject.getState());
-                actionMsg.setMsg(actionMsgTxt);
-                actionMsg.show();
-                if(Input.GetKeyUp(KeyCode.F))
-                {
-                    statefulObject.switchState();
-                    statefulObject.displayState();
-                }
+                statefulObject.switchState();
+                statefulObject.displayState();
             }
         }
         else actionMsg.hide();

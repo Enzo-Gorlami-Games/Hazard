@@ -47,4 +47,13 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         countDownTimer.subscribe(this);
     }
 
+    void Update()
+    {
+        if (isSceneSafe())
+        {
+            winLoseIndicator.text = WIN_TEXT;
+            winLoseIndicator.enabled = true;
+        }
+    }
+
 }
