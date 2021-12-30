@@ -3,15 +3,8 @@ using System.Collections;
 
 public class PressurePlate : MonoBehaviour
 {
-    [SerializeField] GameObject door;
-    private Animator animator;
+    [SerializeField] Animator animator;
     private bool collision;
-
-    // Use this for initialization
-    void Start()
-    {
-        animator = door.GetComponent<Animator>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +18,13 @@ public class PressurePlate : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(collision);
+        if (collision)
+        {
+            animator.SetBool("isOpen_Obj_1", true);
+        }
+        else
+        {
+            animator.SetBool("isOpen_Obj_1", false);
+        }
     }
 }
