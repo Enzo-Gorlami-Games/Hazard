@@ -8,17 +8,16 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
 {
     private const string WIN_TEXT = "YOU WIN!";
     private const string LOSE_TEXT = "YOU LOST!";
-    private const string WIN_BUTTON_TEXT = "NEXT LEVEL";
-    private const string LOSE_BUTTON_TEXT = "RESTART LEVEL";
 
     private bool isSceneSafe;
     private GameObject player;
     private GameObject camera;
+    private Button button;
 
     [SerializeField] string nextLevel;
     [SerializeField] private CountdownTimer countDownTimer;
     [SerializeField] List<Stateful> hazardousObjects;
-    [SerializeField] Button button;
+    [SerializeField] Button lose_button;
     [SerializeField] TextMeshProUGUI winLoseIndicator;
     [SerializeField] TextMeshProUGUI buttonText;
 
@@ -33,28 +32,28 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         if (isSceneSafe)
         {
             winLoseIndicator.text = WIN_TEXT;
-            buttonText.text = WIN_BUTTON_TEXT;
-            button.onClick.AddListener(WinOnClick);
+            button.onClick.AddListener(winOnClick);
+            buttonText.text = "Next Level";
+            
         }
         else
         {
             winLoseIndicator.text = LOSE_TEXT;
-            buttonText.text = LOSE_BUTTON_TEXT;
-            button.onClick.AddListener(LoseOnClick);
+            button.onClick.AddListener(loseOnClick);
         }
         winLoseIndicator.enabled = true;
         button.gameObject.SetActive(true);
         
     }
 
-    private void WinOnClick()
-    {
-        SceneManager.LoadScene(nextLevel);
-    }
-
-    private void LoseOnClick()
+    private void loseOnClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void winOnClick()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 
     private void stopPlayerMovement()
@@ -78,6 +77,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
     void Start()
     {
         winLoseIndicator.enabled = false;
+        button = lose_button;
         button.gameObject.SetActive(false);
         countDownTimer.subscribe(this);
         player = GameObject.FindGameObjectWithTag("Player");
@@ -89,7 +89,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         if (isSceneSafe)
         {
             winLoseIndicator.text = WIN_TEXT;
-            //winLoseIndicator.enabled = true;
+            winLoseIndicator.enabled = true;
         }
     }
 
