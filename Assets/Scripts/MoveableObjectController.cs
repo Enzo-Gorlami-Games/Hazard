@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Stateful))]
 public class MoveableObjectController : MonoBehaviour
 {
     private const string COLLIDE_TAG = "Player";
 
-    [SerializeField] private MessageController actionMsg;
-    public float reachRange = 1.8f;
+    [SerializeField] Text actionMsg;
 
+    public float reachRange = 1.8f;
+    private Stateful statefulObject;
     private bool playerEntered;
     private string actionMsgTxt = "Press F to ";
-    private Stateful statefulObject;
+    
 
 
 
@@ -27,8 +29,9 @@ public class MoveableObjectController : MonoBehaviour
     {
         if (other.tag == COLLIDE_TAG)
         {
+            Debug.Log("Player exit");
             playerEntered = false;
-            actionMsg.hide();
+            actionMsg.enabled = false;
         }
     }
 
@@ -43,7 +46,9 @@ public class MoveableObjectController : MonoBehaviour
     void Start()
     {
         statefulObject = GetComponent<Stateful>();
+        actionMsg.enabled = false;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -51,15 +56,15 @@ public class MoveableObjectController : MonoBehaviour
         {
             Debug.Log("Player Entered");
             actionMsgTxt = getGuiMsg(statefulObject.getState());
-            actionMsg.setMsg(actionMsgTxt);
-            actionMsg.show();
+            actionMsg.text = actionMsgTxt;
+            actionMsg.enabled = true ;
             if (Input.GetKeyUp(KeyCode.F))
             {
                 statefulObject.switchState();
                 statefulObject.displayState();
             }
         }
-        else actionMsg.hide();
+        else actionMsg.enabled = false;
         actionMsgTxt = "Press F to ";
     }
 }

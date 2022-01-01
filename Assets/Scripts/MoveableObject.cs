@@ -7,12 +7,12 @@ public class MoveableObject : Stateful
     private string staticMsg = "pick up";
     private bool isMoving;
 
-    private GameObject camera;
+    private GameObject playerCamera;
     private Transform parent;
 
     public override string getOpenMsg()
     {
-        return movingMsg;
+        return staticMsg;
     }
 
     public override bool getState()
@@ -22,7 +22,7 @@ public class MoveableObject : Stateful
 
     public override string getCloseMsg()
     {
-        return staticMsg;
+        return movingMsg;
     }
 
     public override void switchState()
@@ -33,7 +33,7 @@ public class MoveableObject : Stateful
         }
         else
         {
-            gameObject.transform.parent = camera.transform;
+            gameObject.transform.parent = playerCamera.transform;
 
         }
         isMoving = !isMoving;
@@ -46,8 +46,7 @@ public class MoveableObject : Stateful
 
     private void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         parent = transform.parent;
-        Debug.Log(parent);
     }
 }

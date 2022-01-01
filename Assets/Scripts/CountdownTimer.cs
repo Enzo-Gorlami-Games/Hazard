@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class CountdownTimer : MonoBehaviour
 {
     private float currentTime = 0f;
-    [SerializeField] private float startingTime = 10f;
-
     private LinkedList<TimerInterface> subscribers;
+    private bool timeStopped;
 
+    [SerializeField] private float startingTime = 10f;
     [SerializeField] private Text countDownText;
 
 
@@ -37,13 +37,18 @@ public class CountdownTimer : MonoBehaviour
         this.countDownText = cdt;
     }
 
-
-
+    public void stopTime()
+    {
+        timeStopped = true;
+    }
     // called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countDownText.text = currentTime.ToString("F1");
+        if (!timeStopped)
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countDownText.text = currentTime.ToString("F1");
+        }
 
         if (currentTime <= 10)
         {

@@ -5,16 +5,16 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Stateful))]
 public class HazardObjectController : MonoBehaviour
 {
-    [SerializeField] private MessageController actionMsg;
-    public float reachRange = 1.8f;
+    [SerializeField] Text actionMsg;
 
+    public float reachRange = 1.8f;
     private Stateful statefulObject;
     private Camera fpsCam;
     private GameObject player;
 
 
     private bool playerEntered;
-    private string actionMsgTxt = "Press E to ";
+    private string actionMsgTxt = "Press F to ";
 
     private int rayLayerMask;
 
@@ -36,7 +36,7 @@ public class HazardObjectController : MonoBehaviour
         LayerMask iRayLM = LayerMask.NameToLayer("InteractRaycast");
         rayLayerMask = 1 << iRayLM.value;
 
-        actionMsg.hide();
+        actionMsg.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -52,7 +52,7 @@ public class HazardObjectController : MonoBehaviour
         if (other.gameObject == player)     //player has exited trigger
         {
             playerEntered = false;
-            actionMsg.hide();
+            actionMsg.gameObject.SetActive(false);
         }
     }
 
@@ -69,15 +69,15 @@ public class HazardObjectController : MonoBehaviour
         if (playerEntered)
         {
             actionMsgTxt = getGuiMsg(statefulObject.getState());
-            actionMsg.setMsg(actionMsgTxt);
-            actionMsg.show();
+            actionMsg.text = actionMsgTxt;
+            actionMsg.gameObject.SetActive(true);
             if (Input.GetKeyUp(KeyCode.F))
             {
                 statefulObject.switchState();
                 statefulObject.displayState();
             }
         }
-        else actionMsg.hide();
+        else actionMsg.gameObject.SetActive(false);
         actionMsgTxt = "Press F to ";
     }
 }

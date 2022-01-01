@@ -15,7 +15,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
     private Button button;
 
     [SerializeField] string nextLevel;
-    [SerializeField] private CountdownTimer countDownTimer;
+    [SerializeField] CountdownTimer countDownTimer;
     [SerializeField] List<Stateful> hazardousObjects;
     [SerializeField] Button lose_button;
     [SerializeField] TextMeshProUGUI winLoseIndicator;
@@ -86,10 +86,10 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
 
     void Update()
     {
-        if (isSceneSafe)
+        if (scheckScene())
         {
-            winLoseIndicator.text = WIN_TEXT;
-            winLoseIndicator.enabled = true;
+            onTimeOut();
+            countDownTimer.stopTime();
         }
     }
 
