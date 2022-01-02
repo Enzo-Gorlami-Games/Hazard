@@ -9,6 +9,7 @@ public class MoveableObject : Stateful
     public bool isMoving;
 
     private Transform parent;
+    private Rigidbody rigidbody;
 
     [SerializeField] GameObject dest;
 
@@ -35,24 +36,38 @@ public class MoveableObject : Stateful
 
     public override void displayState()
     {
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        
         if (isMoving)
         {
             rigidbody.useGravity = false;
+            rigidbody.freezeRotation = true;
             rigidbody.transform.parent = dest.transform;
-            transform.parent = dest.transform;
         }
         else
         {
-            this.transform.parent = parent;
-            rigidbody.transform.parent = parent;
+            rigidbody.freezeRotation = false;
             rigidbody.useGravity = true;
+            rigidbody.transform.parent = parent;
+            
         }
         
     }
 
     private void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
         parent = transform.parent;
+    }
+
+    private void Update()
+    {
+        if (isMoving)
+        {
+            if(Vector3.Distance(rigidbody.transform.position, dest.transform.position) > .5)
+            {
+                rigidbody.position = dest.transform.position;
+                displayState();
+            }
+        }
     }
 }
