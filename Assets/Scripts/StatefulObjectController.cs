@@ -83,13 +83,12 @@ public class StatefulObjectController : MonoBehaviour
 					
 				if (statefulObject != null)		//hit object must have MoveableDraw script attached
 				{
-					Debug.Log("statefulObject is not null");
 					showInteractMsg = true;
 					msg = getGuiMsg(stateful);	//need current state for message.
 											
-					if (Input.GetKeyUp(KeyCode.F))
+					if (Input.GetKeyDown(KeyCode.F))
 					{
-						Debug.Log("f up");
+						Debug.Log("f down");
 						stateful.switchState();
 						stateful.displayState();
 						msg = getGuiMsg(stateful);
@@ -98,7 +97,7 @@ public class StatefulObjectController : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log("ray miss");
+				Debug.Log("Ray miss");
 				showInteractMsg = false;
 			}
 		}

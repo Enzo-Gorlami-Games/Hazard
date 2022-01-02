@@ -11,7 +11,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
 
     private bool isSceneSafe;
     private GameObject player;
-    private GameObject camera;
+    private GameObject fpsCamera;
     private Button button;
 
     [SerializeField] string nextLevel;
@@ -59,7 +59,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
     private void stopPlayerMovement()
     {
         player.GetComponent<KeyboardMover>().enabled = false; // disabling keyboard mover
-        camera.GetComponent<MouseLookAround>().enabled = false; // disabling player look
+        fpsCamera.GetComponent<MouseLookAround>().enabled = false; // disabling player look
     }
 
     private bool scheckScene()
@@ -81,7 +81,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         button.gameObject.SetActive(false);
         countDownTimer.subscribe(this);
         player = GameObject.FindGameObjectWithTag("Player");
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        fpsCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update()

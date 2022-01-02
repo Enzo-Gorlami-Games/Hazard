@@ -1,14 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class MoveableObject : Stateful
 {
     private string movingMsg = "put down";
     private string staticMsg = "pick up";
-    private bool isMoving;
+    public bool isMoving;
 
-    private GameObject playerCamera;
     private Transform parent;
+
+    [SerializeField] GameObject dest;
 
     public override string getOpenMsg()
     {
@@ -27,26 +29,30 @@ public class MoveableObject : Stateful
 
     public override void switchState()
     {
-        if (isMoving)
-        {
-            gameObject.transform.parent = parent;
-        }
-        else
-        {
-            gameObject.transform.parent = playerCamera.transform;
 
-        }
         isMoving = !isMoving;
     }
 
     public override void displayState()
     {
-        return;
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        if (isMoving)
+        {
+            rigidbody.useGravity = false;
+            rigidbody.transform.parent = dest.transform;
+            transform.parent = dest.transform;
+        }
+        else
+        {
+            this.transform.parent = parent;
+            rigidbody.transform.parent = parent;
+            rigidbody.useGravity = true;
+        }
+        
     }
 
     private void Start()
     {
-        playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         parent = transform.parent;
     }
 }

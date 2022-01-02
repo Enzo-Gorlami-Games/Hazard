@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000010714126608}
   - component: {fileID: 23000010498486708}
   - component: {fileID: 64000010123462632}
-  - component: {fileID: 114000012587121436}
+  - component: {fileID: 834501382477151385}
   m_Layer: 8
   m_Name: door02
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300026, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000012587121436
+--- !u!114 &834501382477151385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,10 +106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010030812992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 2
+  objectNumber: 1
 --- !u!1 &1000010115221384
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 33000011402410282}
   - component: {fileID: 23000013763631162}
   - component: {fileID: 64000012383088464}
-  - component: {fileID: 114000011107021820}
+  - component: {fileID: 35273985860815094}
   m_Layer: 8
   m_Name: door03
   m_TagString: Untagged
@@ -207,7 +207,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300030, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000011107021820
+--- !u!114 &35273985860815094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,10 +216,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010115221384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 3
+  objectNumber: 1
 --- !u!1 &1000010159534946
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000014217179578}
   - component: {fileID: 65000013031461708}
-  - component: {fileID: 114000012744447528}
+  - component: {fileID: 6933493283267093439}
   m_Layer: 8
   m_Name: door02_interact
   m_TagString: Untagged
@@ -522,7 +522,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.66, z: 0.24}
   m_Center: {x: 0.08, y: 0, z: 0.18}
---- !u!114 &114000012744447528
+--- !u!114 &6933493283267093439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,10 +531,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010256424040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 2
+  objectNumber: 1
 --- !u!1 &1000010266034898
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 33000011371789322}
   - component: {fileID: 23000013719123694}
   - component: {fileID: 64000012864401644}
-  - component: {fileID: 114000010119146130}
+  - component: {fileID: 9121034846919100231}
   m_Layer: 8
   m_Name: draw03
   m_TagString: Untagged
@@ -841,7 +841,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000010119146130
+--- !u!114 &9121034846919100231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -850,10 +850,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010327815906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 8
+  objectNumber: 1
 --- !u!1 &1000010348762210
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 33000013911566388}
   - component: {fileID: 23000010152043314}
   - component: {fileID: 64000012959336230}
-  - component: {fileID: 114000010796481116}
+  - component: {fileID: 3778254890321155701}
   m_Layer: 8
   m_Name: draw01
   m_TagString: Untagged
@@ -951,7 +951,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000010796481116
+--- !u!114 &3778254890321155701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -960,10 +960,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010348762210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 6
+  objectNumber: 1
 --- !u!1 &1000010379363678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011331675138}
   - component: {fileID: 65000011579024478}
-  - component: {fileID: 114000013507784734}
+  - component: {fileID: 5115859298227291624}
   m_Layer: 8
   m_Name: 'door03_interact '
   m_TagString: Untagged
@@ -1297,7 +1297,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.66, z: 0.24}
   m_Center: {x: 0.08, y: 0, z: 0.18}
---- !u!114 &114000013507784734
+--- !u!114 &5115859298227291624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1306,10 +1306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010774531116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 3
+  objectNumber: 1
 --- !u!1 &1000010788001824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1624,7 @@ GameObject:
   - component: {fileID: 33000013777311244}
   - component: {fileID: 23000013376214270}
   - component: {fileID: 64000012528626880}
-  - component: {fileID: 114000010414457944}
+  - component: {fileID: 2307106034486162131}
   m_Layer: 8
   m_Name: door01
   m_TagString: Untagged
@@ -1709,7 +1709,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300022, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000010414457944
+--- !u!114 &2307106034486162131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010914428954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectNumber: 1
@@ -1826,8 +1826,7 @@ GameObject:
   - component: {fileID: 4000010664925176}
   - component: {fileID: 65000014281147728}
   - component: {fileID: 95000012387174332}
-  - component: {fileID: 114000012605572956}
-  - component: {fileID: 114000013030633568}
+  - component: {fileID: 615298084445894746}
   m_Layer: 8
   m_Name: PFB_DoorDouble
   m_TagString: Untagged
@@ -1882,7 +1881,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000012605572956
+--- !u!114 &615298084445894746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1891,20 +1890,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010972506066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachRange: 1.8
---- !u!114 &114000013030633568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010972506066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectNumber: 1
@@ -2012,8 +1998,7 @@ GameObject:
   - component: {fileID: 4000014292065706}
   - component: {fileID: 65000011208167406}
   - component: {fileID: 95000013266641350}
-  - component: {fileID: 114000012924038136}
-  - component: {fileID: 114000012751682006}
+  - component: {fileID: 5654960580404127698}
   m_Layer: 8
   m_Name: PFB_DoorSingle_Open (1)
   m_TagString: Untagged
@@ -2068,7 +2053,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000012924038136
+--- !u!114 &5654960580404127698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2077,23 +2062,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011089100028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectNumber: 1
---- !u!114 &114000012751682006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011089100028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachRange: 1.8
 --- !u!1 &1000011163875750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2218,6 @@ GameObject:
   - component: {fileID: 33000011217588158}
   - component: {fileID: 23000012081070322}
   - component: {fileID: 64000013580793272}
-  - component: {fileID: 54000013685051624}
   - component: {fileID: 65000011876632014}
   m_Layer: 8
   m_Name: DoorSingle
@@ -2332,22 +2303,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 03e880133708442c4b8533df94284924, type: 3}
---- !u!54 &54000013685051624
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011272684302}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65000011876632014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2500,8 +2455,7 @@ GameObject:
   - component: {fileID: 4000010501147590}
   - component: {fileID: 65000012842046552}
   - component: {fileID: 95000012275185510}
-  - component: {fileID: 114000012427682274}
-  - component: {fileID: 114000010184101186}
+  - component: {fileID: 3917821991656496376}
   m_Layer: 8
   m_Name: PFB_DoorSingle_Open
   m_TagString: Untagged
@@ -2556,7 +2510,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000012427682274
+--- !u!114 &3917821991656496376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2565,23 +2519,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011446362578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectNumber: 1
---- !u!114 &114000010184101186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011446362578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachRange: 1.8
 --- !u!1 &1000011479749790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2732,7 @@ GameObject:
   - component: {fileID: 4000012273873390}
   - component: {fileID: 65000011063372734}
   - component: {fileID: 95000014245292296}
-  - component: {fileID: 114000011657274968}
+  - component: {fileID: 359853760769865901}
   m_Layer: 0
   m_Name: PFB_KitchenBench
   m_TagString: Untagged
@@ -2848,7 +2789,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114000011657274968
+--- !u!114 &359853760769865901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2857,10 +2798,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011584539036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reachRange: 1.9
+  objectNumber: 1
 --- !u!1 &1000011600547980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011704670010}
   - component: {fileID: 65000012410800092}
-  - component: {fileID: 114000013164242136}
+  - component: {fileID: 7037394580310311640}
   m_Layer: 8
   m_Name: door01_interact
   m_TagString: Untagged
@@ -2906,7 +2847,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.63, y: 0.53, z: 0.24}
   m_Center: {x: 0.04, y: -0.06, z: 0.18}
---- !u!114 &114000013164242136
+--- !u!114 &7037394580310311640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2915,7 +2856,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011600547980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectNumber: 1
@@ -2929,7 +2870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013714286766}
   - component: {fileID: 65000013740879300}
-  - component: {fileID: 114000013486062178}
+  - component: {fileID: 1878439708864674512}
   m_Layer: 8
   m_Name: door04_interact
   m_TagString: Untagged
@@ -2964,7 +2905,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.66, z: 0.24}
   m_Center: {x: 0.08, y: 0, z: 0.18}
---- !u!114 &114000013486062178
+--- !u!114 &1878439708864674512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2973,10 +2914,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011688432020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 4
+  objectNumber: 1
 --- !u!1 &1000011786419126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,7 +2930,7 @@ GameObject:
   - component: {fileID: 33000010600731030}
   - component: {fileID: 23000013607915592}
   - component: {fileID: 64000012832282172}
-  - component: {fileID: 114000010575931396}
+  - component: {fileID: 236155983745850678}
   m_Layer: 8
   m_Name: draw02
   m_TagString: Untagged
@@ -3074,7 +3015,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300010, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000010575931396
+--- !u!114 &236155983745850678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3083,10 +3024,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011786419126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 7
+  objectNumber: 1
 --- !u!1 &1000011832338026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,7 +3218,7 @@ GameObject:
   - component: {fileID: 33000011029908158}
   - component: {fileID: 23000012961263658}
   - component: {fileID: 64000012146798086}
-  - component: {fileID: 114000011209561204}
+  - component: {fileID: 8882713437357403274}
   m_Layer: 8
   m_Name: door04
   m_TagString: Untagged
@@ -3362,7 +3303,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300034, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000011209561204
+--- !u!114 &8882713437357403274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3371,10 +3312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011980157368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 4
+  objectNumber: 1
 --- !u!1 &1000012024890870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011298170374}
   - component: {fileID: 65000013703087940}
-  - component: {fileID: 114000010800186596}
+  - component: {fileID: 5001875348102672032}
   m_Layer: 8
   m_Name: door05_interact
   m_TagString: Untagged
@@ -3420,7 +3361,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 0.66, z: 0.24}
   m_Center: {x: 0.08, y: 0, z: 0.18}
---- !u!114 &114000010800186596
+--- !u!114 &5001875348102672032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3429,10 +3370,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012024890870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 5
+  objectNumber: 1
 --- !u!1 &1000012077316262
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,7 +3738,7 @@ GameObject:
   - component: {fileID: 33000011585557260}
   - component: {fileID: 23000013526269030}
   - component: {fileID: 64000011782601814}
-  - component: {fileID: 114000011153819892}
+  - component: {fileID: 474045222322876631}
   m_Layer: 8
   m_Name: draw04
   m_TagString: Untagged
@@ -3882,7 +3823,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300018, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000011153819892
+--- !u!114 &474045222322876631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3891,10 +3832,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012692620452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 9
+  objectNumber: 1
 --- !u!1 &1000012738118390
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4768,7 @@ GameObject:
   - component: {fileID: 33000011913171130}
   - component: {fileID: 23000012790213202}
   - component: {fileID: 64000012589391856}
-  - component: {fileID: 114000011526249166}
+  - component: {fileID: 7628337129555916166}
   m_Layer: 8
   m_Name: door05
   m_TagString: Untagged
@@ -4912,7 +4853,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300038, guid: 14cf328cd0a9046e5a177954438c6a56, type: 3}
---- !u!114 &114000011526249166
+--- !u!114 &7628337129555916166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4921,10 +4862,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013777419134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c9e4b7fe55242249d6c0ebf84e1432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 5
+  objectNumber: 1
 --- !u!1 &1000013814538730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,7 +4879,7 @@ GameObject:
   - component: {fileID: 23000011623582228}
   - component: {fileID: 64000010243441250}
   m_Layer: 0
-  m_Name: PFB_Building_Base
+  m_Name: PFB_Building_Base 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5048,7 +4989,6 @@ GameObject:
   - component: {fileID: 33000011642564804}
   - component: {fileID: 23000010398031534}
   - component: {fileID: 64000013159762692}
-  - component: {fileID: 54000012156747226}
   - component: {fileID: 65000010959350736}
   m_Layer: 8
   m_Name: DoorSingle
@@ -5134,22 +5074,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 03e880133708442c4b8533df94284924, type: 3}
---- !u!54 &54000012156747226
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013893490806}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65000010959350736
 BoxCollider:
   m_ObjectHideFlags: 0
