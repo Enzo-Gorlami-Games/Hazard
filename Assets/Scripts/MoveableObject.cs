@@ -46,7 +46,6 @@ public class MoveableObject : Stateful
         {
             rb.useGravity = false;
             rb.freezeRotation = true;
-            rb.isKinematic = true;
             rb.transform.parent = dest.transform;
             rb.transform.rotation = originalRotationValue;
 
@@ -56,10 +55,9 @@ public class MoveableObject : Stateful
         {
             rb.freezeRotation = false;
             rb.useGravity = true;
-            rb.isKinematic = false;
             rb.transform.parent = parent;
             rb.transform.rotation = originalRotationValue;
-            rb.drag = 10;
+            rb.drag = 5;
 
             audioManager.Play("Putdown Sound");
             
@@ -79,11 +77,13 @@ public class MoveableObject : Stateful
     {
         if (isMoving)
         {
-            if(Vector3.Distance(rb.transform.position, dest.transform.position) > .5)
+            if(Vector3.Distance(rb.transform.position, dest.transform.position) > .4)
             {
                 rb.position = dest.transform.position;
-                displayState();
+                //displayState();
             }
+            rb.transform.rotation = originalRotationValue;
+            rb.velocity = Vector3.zero;
         }
     }
 }

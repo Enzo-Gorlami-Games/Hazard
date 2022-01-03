@@ -10,10 +10,10 @@ public class CountdownTimer : MonoBehaviour
     private bool timeStopped;
     private bool audioPlayed;
     private bool audioStopped;
+    private AudioManager audioManager;
 
     [SerializeField] float startingTime = 10f;
     [SerializeField] Text countDownText;
-    [SerializeField] AudioManager audioManager;
 
 
     // constructor
@@ -88,6 +88,7 @@ public class CountdownTimer : MonoBehaviour
             subscribers = new LinkedList<TimerInterface>();
         }
         currentTime = startingTime;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void subscribe(TimerInterface subscriber)

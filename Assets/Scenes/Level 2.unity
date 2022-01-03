@@ -1023,8 +1023,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1696,11 +1696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 690.0667
+      value: 680
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 212.7049
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1764,11 +1764,11 @@ PrefabInstance:
       objectReference: {fileID: 1397165337}
     - target: {fileID: 8688747704281486327, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onClick
+      value: instructionsOnClick
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486327, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InstructionsManager, Assembly-CSharp
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486329, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_Name
@@ -1877,36 +1877,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 792e22b4acf03b74db5f620ccdef7539, type: 3}
   m_PrefabInstance: {fileID: 445026704}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &468228364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 468228365}
-  m_Layer: 0
-  m_Name: Hand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &468228365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468228364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 0, z: 0.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5997248757199788270}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &495596884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3009,10 +2979,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3332,11 +3302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 690.0667
+      value: 680
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 212.7049
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3937,11 +3907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010214412056, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.120125294
+      value: 0.133
       objectReference: {fileID: 0}
     - target: {fileID: 4000010214412056, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.3527484
+      value: -5.398
       objectReference: {fileID: 0}
     - target: {fileID: 4000010214412056, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3970,6 +3940,10 @@ PrefabInstance:
     - target: {fileID: 4000010214412056, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000013895505880, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d10197870d1b0d4faefe30b1a81d689, type: 3}
@@ -4057,8 +4031,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4607,7 +4581,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 2}
+  m_Size: {x: 1.5, y: 0.4, z: 1.5}
   m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!114 &1284302060
 MonoBehaviour:
@@ -4621,7 +4595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dest: {fileID: 468228364}
+  dest: {fileID: 5997248757199788270}
 --- !u!54 &1284302061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5089,7 +5063,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1397165334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af51c10bfb69477eb442899cff8dba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 284a5a24262da4dbbb68b2ceb9372544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1698190066}
@@ -5097,8 +5071,8 @@ MonoBehaviour:
   fpsCamera: {fileID: 5997248757199788271}
   instructions:
   - Fire is not a bad thing
-  - It just needs to be controlled
-  - Then, it is useful in many ways
+  - it just needs to be handled properly
+  - Then, it can be used in many ways
   instructionDisplay: {fileID: 187736660}
   buttonText: {fileID: 405433571}
   nextButton: {fileID: 405433572}
@@ -5775,7 +5749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 60
   countDownText: {fileID: 1698190067}
-  audioManager: {fileID: 0}
 --- !u!114 &1698190067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7066,7 +7039,7 @@ PrefabInstance:
     - target: {fileID: 212481262, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
       propertyPath: dest
       value: 
-      objectReference: {fileID: 468228364}
+      objectReference: {fileID: 5997248757199788270}
     - target: {fileID: 1925743097751493000, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
       propertyPath: m_Name
       value: Fire Ext
@@ -7126,6 +7099,14 @@ PrefabInstance:
     - target: {fileID: 6610713893226982496, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033282983101989491, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
+      propertyPath: m_Size.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033282983101989491, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
+      propertyPath: m_Size.z
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c92b206828d4f58b3f21ae0418a4a8, type: 3}
@@ -7259,9 +7240,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93461c07f308d4837a54b14a2c419f81, type: 3}
---- !u!4 &5997248757199788270 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5997248757893363097, guid: 93461c07f308d4837a54b14a2c419f81, type: 3}
+--- !u!1 &5997248757199788270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2147922443161262617, guid: 93461c07f308d4837a54b14a2c419f81, type: 3}
   m_PrefabInstance: {fileID: 5997248757199788269}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5997248757199788271 stripped

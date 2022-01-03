@@ -198,7 +198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &147188333
 PrefabInstance:
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013491457822, guid: 545d487689cd54cbbbd4cff390429885, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000013491457822, guid: 545d487689cd54cbbbd4cff390429885, type: 3}
       propertyPath: m_LocalPosition.x
@@ -261,80 +261,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545d487689cd54cbbbd4cff390429885, type: 3}
---- !u!1 &248256855
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 248256857}
-  - component: {fileID: 248256856}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &248256856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248256855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bbac8b6c1284845ad4e61cf2bccebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Ticking Clock
-    clip: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-    loop: 1
-  - name: Win Sound
-    clip: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-    loop: 0
-  - name: Lose Sound
-    clip: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-    loop: 0
-  - name: Pickup Sound
-    clip: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-    loop: 0
-  - name: Putdown Sound
-    clip: {fileID: 8300000, guid: dfd742b227924bb4cb7c133c3d94c6da, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-    loop: 0
---- !u!4 &248256857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248256855}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &257139143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514763842, guid: ba124179af6a3a7469f127358241673d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514763842, guid: ba124179af6a3a7469f127358241673d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -522,7 +448,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 1060576417}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -111.524, z: 0}
 --- !u!1 &306296630
 GameObject:
@@ -608,8 +534,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -912,7 +838,7 @@ RectTransform:
   - {fileID: 526498150}
   - {fileID: 1553635269}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1071,7 +997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1311,7 +1237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351086852
 GameObject:
@@ -1405,9 +1331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b65e28ba9e34fecbb8a5eab0f1706a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 13
+  startingTime: 30
   countDownText: {fileID: 1351086854}
-  audioManager: {fileID: 248256856}
 --- !u!1 &1397165334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1397165336
 MonoBehaviour:
@@ -1477,8 +1402,9 @@ MonoBehaviour:
   player: {fileID: 294347121}
   fpsCamera: {fileID: 963194225}
   instructions:
-  - This level will take you through the basic mechanics of the game
-  - Throughout the game, look in the windows for hints
+  - Welcome!
+  - This level will show you the basics
+  - Look through the windows for hints
   instructionDisplay: {fileID: 306296632}
   buttonText: {fileID: 1619828246}
   nextButton: {fileID: 484463196}
@@ -1787,11 +1713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 690.0667
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 212.7049
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1865,6 +1791,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instructions Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8688747704474724165, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688747704474724165, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
 --- !u!224 &1603236423 stripped
@@ -1920,11 +1854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 690.0667
+      value: 680
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 212.7049
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8688747704281486326, guid: b04ae34858adc42fb99bdd51375cb993, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2032,10 +1966,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2082,7 +2016,7 @@ RectTransform:
   - {fileID: 306296631}
   - {fileID: 1603236423}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2173,8 +2107,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

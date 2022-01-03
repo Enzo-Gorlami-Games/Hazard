@@ -29,7 +29,6 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         stopPlayerMovement();
         Cursor.lockState = CursorLockMode.None;
 
-
         if (isSceneSafe)
         {
             if (!isAudioPlayed)

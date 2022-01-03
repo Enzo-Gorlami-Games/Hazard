@@ -84,16 +84,16 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                startScene();
-            }
-            else
-            {
-                pauseScene();
-            }
-        }    
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    if (isPaused)
+        //    {
+        //        startScene();
+        //    }
+        //    else
+        //    {
+        //        pauseScene();
+        //    }
+        //}    
     }
 }
