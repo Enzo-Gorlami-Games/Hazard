@@ -54,7 +54,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         }
         winLoseIndicator.enabled = true;
         button.gameObject.SetActive(true);
-        
+        FindObjectOfType<AudioManager>().Stop("Ticking Clock");
     }
 
     private void loseOnClick()
