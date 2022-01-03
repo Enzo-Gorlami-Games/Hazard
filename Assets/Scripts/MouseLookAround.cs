@@ -19,8 +19,8 @@ public class MouseLookAround : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * XLookSpeed * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * YLookSpeed * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X");// * XLookSpeed * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y");// * YLookSpeed * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -MAX_Y_ROTATION, MAX_Y_ROTATION);
