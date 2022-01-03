@@ -145,7 +145,7 @@ public class StatefulObjectController : MonoBehaviour
 	private void setupGui()
 	{
 		guiStyle = new GUIStyle();
-		guiStyle.fontSize = 16;
+		guiStyle.fontSize = 50;
 		guiStyle.fontStyle = FontStyle.Bold;
 		guiStyle.normal.textColor = Color.white;
 		msg = "Press F to Open";

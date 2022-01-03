@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InstructionsManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField] CountdownTimer timer;
     [SerializeField] GameObject player;
@@ -15,8 +15,9 @@ public class InstructionsManager : MonoBehaviour
 
     private int index;
     private int size;
+    private bool isPaused;
 
-    public void onClick()
+    public void instructionsOnClick()
     {
         ++index;
         if (index == size)
@@ -25,7 +26,7 @@ public class InstructionsManager : MonoBehaviour
         }
         else
         {
-            setText();
+            setInstructionUI();
         }
     }
 
@@ -36,6 +37,13 @@ public class InstructionsManager : MonoBehaviour
         enablePlayerMovement();
         timer.startTime();
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void pauseScene()
+    {
+        timer.stopTime();
+        Cursor.lockState = CursorLockMode.None;
+        disablePlayerMovement();
     }
 
     private void enablePlayerMovement()
@@ -50,7 +58,7 @@ public class InstructionsManager : MonoBehaviour
         fpsCamera.GetComponent<MouseLookAround>().enabled = false; // disabling player look
     }
 
-    private void setText()
+    private void setInstructionUI()
     {
         instructionDisplay.text = instructions[index];
         if (index == size - 1)
@@ -70,7 +78,22 @@ public class InstructionsManager : MonoBehaviour
         disablePlayerMovement();
         index = 0;
         size = instructions.Count;
-        setText();
+        setInstructionUI();
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                startScene();
+            }
+            else
+            {
+                pauseScene();
+            }
+        }    
     }
 }
