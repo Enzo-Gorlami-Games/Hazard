@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class TimedSceneManager : MonoBehaviour, TimerInterface
 {
-    private const string WIN_TEXT = "YOU WIN!";
-    private const string LOSE_TEXT = "YOU LOST!";
+    public string WIN_TEXT = "YOU WIN!";
+    public string LOSE_TEXT = "YOU LOST!";
 
     private bool isSceneSafe;
+    private bool isAudioPlayed;
     private GameObject player;
     private GameObject fpsCamera;
     private Button button;
 
     [SerializeField] string nextLevel;
     [SerializeField] CountdownTimer countDownTimer;
-    [SerializeField] List<Stateful> hazardousObjects;
+    [SerializeField] List<Stateful> statefulObjects;
     [SerializeField] Button lose_button;
     [SerializeField] TextMeshProUGUI winLoseIndicator;
     [SerializeField] TextMeshProUGUI buttonText;
@@ -31,6 +32,11 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
 
         if (isSceneSafe)
         {
+            if (!isAudioPlayed)
+            {
+                FindObjectOfType<AudioManager>().Play("Win Sound");
+                isAudioPlayed = true;
+            }
             winLoseIndicator.text = WIN_TEXT;
             button.onClick.AddListener(winOnClick);
             buttonText.text = "Next Level";
@@ -38,6 +44,11 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         }
         else
         {
+            if (!isAudioPlayed)
+            {
+                FindObjectOfType<AudioManager>().Play("Lose Sound");
+                isAudioPlayed = true;
+            }
             winLoseIndicator.text = LOSE_TEXT;
             button.onClick.AddListener(loseOnClick);
         }
@@ -64,9 +75,10 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
 
     private bool scheckScene()
     {
-        foreach (Stateful stateful in hazardousObjects)
+        foreach (Stateful stateful in statefulObjects)
         {
-            if (stateful.getState())
+            // if one object is in an illegal state
+            if (!stateful.getState())
             {
                 return false;
             }

@@ -73,11 +73,9 @@ public class StatefulObjectController : MonoBehaviour
 			if (Physics.Raycast(rayOrigin,fpsCam.transform.forward, out hit,reachRange,rayLayerMask))
 			{
 				Stateful statefulObject = null;
-				Debug.Log("ray hit");
 				//is the object of the collider player is looking at the same as me?
 				if (!isEqualToParent(hit.collider, out statefulObject))
 				{   //it's not so return;
-					Debug.Log("not equal to parent");
 					return;
 				}
 					
@@ -88,7 +86,6 @@ public class StatefulObjectController : MonoBehaviour
 											
 					if (Input.GetKeyDown(KeyCode.F))
 					{
-						Debug.Log("f down");
 						stateful.switchState();
 						stateful.displayState();
 						msg = getGuiMsg(stateful);
@@ -97,7 +94,6 @@ public class StatefulObjectController : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log("Ray miss");
 				showInteractMsg = false;
 			}
 		}
@@ -178,19 +174,4 @@ public class StatefulObjectController : MonoBehaviour
 	}
 	//End of GUI Config --------------
 	#endregion
-
-
-	//private string getGuiMsg(bool isOpen)
-	//{
-	//	string rtnVal;
-	//	if (isOpen)
-	//	{
-	//		rtnVal = "Press" + "F to Close";
-	//	}else
-	//	{
-	//		rtnVal = "Press F to Open";
-	//	}
-
-	//	return rtnVal;
-	//}
 }

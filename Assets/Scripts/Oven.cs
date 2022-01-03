@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Oven : Stateful
 {
-    [SerializeField] private bool isHazardous;
+    [SerializeField] bool isSafe;
 
-    private string openMsg = "turn on flame";
-    private string closeMsg = "turn off flame";
+    private string openMsg = "turn off flame";
+    private string closeMsg = "turn on flame";
 
     public override void displayState()
     {
@@ -16,7 +16,7 @@ public class Oven : Stateful
             {
                 ParticleSystem childPartical = child.gameObject.GetComponent<ParticleSystem>();
                 var em = childPartical.emission;
-                if (isHazardous)
+                if (!isSafe)
                 {   
                     em.enabled = true;
                 }
@@ -30,11 +30,11 @@ public class Oven : Stateful
     }
     public override bool getState()
     {
-        return isHazardous;
+        return isSafe;
     }
     public override void switchState()
     {
-        isHazardous = !isHazardous;
+        isSafe = !isSafe;
     }
 
     public override string getCloseMsg()

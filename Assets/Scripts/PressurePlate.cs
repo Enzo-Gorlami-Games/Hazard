@@ -1,9 +1,16 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿/// <summary>
+/// AUTHOR: Tal Zichlinsky
+/// 
+/// This class serves as the basic operator for a pressure plate that 
+/// changes the boolean state of an animator
+/// 
+/// </summary>
+using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] string booleanExpression;
     private int counter;
 
     private void OnTriggerEnter(Collider other)
@@ -20,11 +27,11 @@ public class PressurePlate : MonoBehaviour
     {
         if (counter > 0)
         {
-            animator.SetBool("isOpen_Obj_1", true);
+            animator.SetBool(booleanExpression, true);
         }
         else
         {
-            animator.SetBool("isOpen_Obj_1", false);
+            animator.SetBool(booleanExpression, false);
         }
     }
 }

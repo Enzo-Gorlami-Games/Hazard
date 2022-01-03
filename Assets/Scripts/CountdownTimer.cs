@@ -8,9 +8,12 @@ public class CountdownTimer : MonoBehaviour
     private float currentTime = 0f;
     private LinkedList<TimerInterface> subscribers;
     private bool timeStopped;
+    private bool audioPlayed;
+    private bool audioStopped;
 
-    [SerializeField] private float startingTime = 10f;
-    [SerializeField] private Text countDownText;
+    [SerializeField] float startingTime = 10f;
+    [SerializeField] Text countDownText;
+    [SerializeField] AudioManager audioManager;
 
 
     // constructor
@@ -41,6 +44,11 @@ public class CountdownTimer : MonoBehaviour
     {
         timeStopped = true;
     }
+
+    public void startTime()
+    {
+        timeStopped = false;
+    }
     // called once per frame
     void Update()
     {
@@ -53,11 +61,21 @@ public class CountdownTimer : MonoBehaviour
         if (currentTime <= 10)
         {
             countDownText.color = Color.red;
+            if(!audioPlayed)
+            {
+                audioManager.Play("Ticking Clock");
+                audioPlayed = true;
+            }
         }
 
         if (currentTime <= 0)
         {
             currentTime = 0;
+            if (!audioStopped)
+            {
+                audioManager.Stop("Ticking Clock");
+                audioStopped = true;
+            }
             timeOut();
         }
     }

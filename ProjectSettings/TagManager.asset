@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flame
   - Hazard
+  - Fire Extinguisher
   layers:
   - Default
   - TransparentFX

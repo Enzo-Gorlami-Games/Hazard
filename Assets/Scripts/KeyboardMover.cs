@@ -7,7 +7,7 @@ public class KeyboardMover : MonoBehaviour
     [Tooltip("Speed of player keyboard-movement, in meters/second")]
     [SerializeField] float speed = 3.5f;
     [SerializeField] float gravity = 9.81f;
-
+    [SerializeField] AudioManager audioManager;
     private CharacterController cc;
     void Start()
     {

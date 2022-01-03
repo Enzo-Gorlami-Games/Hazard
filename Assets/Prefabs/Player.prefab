@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   gravity: 9.81
+  audioManager: {fileID: 0}
 --- !u!1 &5997248757893363100
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c957e75e21164fe88aebaa0a13745b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XLookSpeed: 150
-  YLookSpeed: 150
+  XLookSpeed: 100
+  YLookSpeed: 100
   PlayerBody: {fileID: 5997248757475883419}

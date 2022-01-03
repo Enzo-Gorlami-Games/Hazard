@@ -6,12 +6,16 @@ public class MoveableObject : Stateful
 {
     private string movingMsg = "put down";
     private string staticMsg = "pick up";
-    public bool isMoving;
+    private bool isMoving;
 
     private Transform parent;
-    private Rigidbody rigidbody;
+    private Rigidbody rb;
+    private Quaternion originalRotationValue;
+    private AudioManager audioManager;
 
     [SerializeField] GameObject dest;
+    
+    
 
     public override string getOpenMsg()
     {
@@ -32,6 +36,7 @@ public class MoveableObject : Stateful
     {
 
         isMoving = !isMoving;
+        
     }
 
     public override void displayState()
@@ -39,15 +44,24 @@ public class MoveableObject : Stateful
         
         if (isMoving)
         {
-            rigidbody.useGravity = false;
-            rigidbody.freezeRotation = true;
-            rigidbody.transform.parent = dest.transform;
+            rb.useGravity = false;
+            rb.freezeRotation = true;
+            rb.isKinematic = true;
+            rb.transform.parent = dest.transform;
+            rb.transform.rotation = originalRotationValue;
+
+            audioManager.Play("Pickup Sound");
         }
         else
         {
-            rigidbody.freezeRotation = false;
-            rigidbody.useGravity = true;
-            rigidbody.transform.parent = parent;
+            rb.freezeRotation = false;
+            rb.useGravity = true;
+            rb.isKinematic = false;
+            rb.transform.parent = parent;
+            rb.transform.rotation = originalRotationValue;
+            rb.drag = 10;
+
+            audioManager.Play("Putdown Sound");
             
         }
         
@@ -55,17 +69,19 @@ public class MoveableObject : Stateful
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         parent = transform.parent;
+        originalRotationValue = transform.rotation;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
     {
         if (isMoving)
         {
-            if(Vector3.Distance(rigidbody.transform.position, dest.transform.position) > .5)
+            if(Vector3.Distance(rb.transform.position, dest.transform.position) > .5)
             {
-                rigidbody.position = dest.transform.position;
+                rb.position = dest.transform.position;
                 displayState();
             }
         }

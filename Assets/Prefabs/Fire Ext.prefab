@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5835550981783310026}
   - component: {fileID: 4354949355029781511}
   - component: {fileID: 6432523513423821297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8225266432643679289}
   - component: {fileID: 3973019704439533799}
   - component: {fileID: 5366912110650688859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,9 +207,9 @@ GameObject:
   - component: {fileID: 212481261}
   - component: {fileID: 212481262}
   - component: {fileID: 9033282983101989491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire Ext
-  m_TagString: Untagged
+  m_TagString: Fire Extinguisher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,8 +348,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 3, z: 5}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 7.2347565, y: 2, z: 8.918776}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7242874081086555316
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 2588397201509325991}
   - component: {fileID: 2978217324133666930}
   - component: {fileID: 8780896539602602073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
