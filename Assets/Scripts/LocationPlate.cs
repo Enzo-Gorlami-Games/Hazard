@@ -9,14 +9,7 @@ public class LocationPlate : Stateful
 
     public override void displayState()
     {
-        if (isSatisfied)
-        {
-            GetComponent<Renderer>().material.color = Color.green;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.red;
-        }
+        throw new NotImplementedException();
     }
         
     public override void switchState()
@@ -45,8 +38,7 @@ public class LocationPlate : Stateful
 
         if (other.tag == satisfyingTag)
         {
-            switchState();
-            displayState();
+            isSatisfied = true;
         }
     }
 
@@ -54,8 +46,7 @@ public class LocationPlate : Stateful
     {
         if (other.tag == satisfyingTag)
         {
-            switchState();
-            displayState();
+            isSatisfied = false;
         }
     }
 

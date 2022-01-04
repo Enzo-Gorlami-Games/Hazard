@@ -1419,9 +1419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ACTION: F/E
-
-'
+  m_text: 'ACTION: F'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35f76d20fcf294c6e80594ccd91fa24b, type: 2}
   m_sharedMaterial: {fileID: 3247604123514783887, guid: 35f76d20fcf294c6e80594ccd91fa24b, type: 2}

@@ -14,6 +14,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
     private GameObject player;
     private GameObject fpsCamera;
     private Button button;
+    private AudioManager audioManager;
 
     [SerializeField] string nextLevel;
     [SerializeField] CountdownTimer countDownTimer;
@@ -33,7 +34,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         {
             if (!isAudioPlayed)
             {
-                FindObjectOfType<AudioManager>().Play("Win Sound");
+                audioManager.Play("Win Sound");
                 isAudioPlayed = true;
             }
             winLoseIndicator.text = WIN_TEXT;
@@ -45,7 +46,8 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         {
             if (!isAudioPlayed)
             {
-                FindObjectOfType<AudioManager>().Play("Lose Sound");
+                audioManager.Play("Lose Sound");
+                Debug.Log("Found audioManager");
                 isAudioPlayed = true;
             }
             winLoseIndicator.text = LOSE_TEXT;
@@ -53,7 +55,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         }
         winLoseIndicator.enabled = true;
         button.gameObject.SetActive(true);
-        FindObjectOfType<AudioManager>().Stop("Ticking Clock");
+        audioManager.Stop("Ticking Clock");
     }
 
     private void loseOnClick()
@@ -93,6 +95,7 @@ public class TimedSceneManager : MonoBehaviour, TimerInterface
         countDownTimer.subscribe(this);
         player = GameObject.FindGameObjectWithTag("Player");
         fpsCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
